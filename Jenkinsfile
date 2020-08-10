@@ -22,5 +22,9 @@ pipeline {
             sh 'docker stop app'
             sh 'docker rm app'
         }
+
+        success {
+            sh 'echo Yeah!'
+        }
     }
 }
