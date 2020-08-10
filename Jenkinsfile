@@ -11,8 +11,8 @@ pipeline {
         stage('Test') {
             agent any
             steps {
-                sh 'docker run -d --name app -p 5000:5000 my_app '
-                sh 'pytest test_flask.py'
+                sh 'docker run -d --name app -p 5000:5000 my_app'
+                sh 'docker exec -it my_app pytest test_flask.py'
             }
         }
     }
