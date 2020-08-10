@@ -11,7 +11,8 @@ pipeline {
         stage('Test') {
             agent any
             steps {
-                sh 'docker images'
+                sh 'docker run -p 5000:5000 my_app '
+                sh 'pytest test_flask.py'
             }
         }
     }
