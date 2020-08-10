@@ -12,7 +12,6 @@ pipeline {
             agent any
             steps {
                 sh 'docker images'
-                echo 'Testing stuff...'
             }
         }
     }
