@@ -5,7 +5,7 @@ pipeline {
         stage('Build Assets') {
             agent any 
             steps {
-                sh 'docker ps'
+                sh 'docker build'
             }
         }
         stage('Test') {
